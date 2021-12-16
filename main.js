@@ -25,6 +25,18 @@ function setup(){
 
 function draw(){
     image(video , 0 , 0 , 600 , 500);
+
+    fill("#ff0000");
+    stroke("#ff0000");
+
+    circle(leftWristX , leftWristY , 20);
+
+    number_leftWirstY = Number(leftWristY);
+
+    remove_decimals = floor(number_leftWirstY);
+    volume = remove_decimals/500;
+    document.getElementById("volume").innerHTML = "volume = " + volume;
+    song.setVolume(volume);
 }
 
 function play(){
